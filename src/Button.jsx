@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import 'material-symbols';
+
 
 const Icon = ({ children }) => (
-  <i className='materaial-symbols-ouylined'>
+  <i className='material-symbols-outlined'>
     { children }
   </i>
 );
+
 
 Icon.propTypes = {
   children: PropTypes.node.isRequired
