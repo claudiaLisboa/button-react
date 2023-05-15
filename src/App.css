@@ -8,20 +8,26 @@
     text-decoration: none;
     list-style-type: none;
     text-align: center;
-    /* font-size: 34px; */
+    font-size: 18px; 
 }
 
 body{
     position: relative;
     height: 100vh;
-    background-color:rgb(242, 239, 217);
+    background-color:rgb(237, 237, 233);
 }
-
+div{
+  margin: auto;
+  width: 50%;
+  
+  padding: 10px;
+}
 .fab {
    position: fixed;
    right: 30px;
    bottom:38px;
    border-radius: 50%;
+   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
 }
 
 button{
@@ -64,3 +70,49 @@ button{
   visibility: hidden;
   transition: 0.375s;
 }
+
+.fab.open > button {
+  rotate: 45deg;
+}
+
+.fab.open .menu{
+   scale: 1;
+   translate: 0;
+   opacity: 1;
+   visibility: visible;
+}
+
+.menu > button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(255 255 255, 0.08);
+  color: #524f4f;
+  transition: 0.3s;
+}
+
+.menu > button:hover{
+  background: rgba(255, 255, 255, 0.16);
+  
+}
+
+.menu > button > span{
+  position: absolute;
+  right: 64px;
+  white-space: nowrap;
+  translate: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.menu > button:hover > span{
+  translate: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
