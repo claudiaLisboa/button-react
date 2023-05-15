@@ -1,12 +1,18 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Icon = ({ children }) => (
-    <i className='materaial-symbols-ouylined'>
-        { children }
-    </i>
+  <i className='materaial-symbols-ouylined'>
+    { children }
+  </i>
 );
 
-const Button = () => {
+Icon.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+
+function Button() {
     const [ isOpen, setIsOpen ] = useState(false);
 
     return (
@@ -23,6 +29,6 @@ const Button = () => {
             </div>
         </div>
     );
-};
+}
 
 export default Button;
