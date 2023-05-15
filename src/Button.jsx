@@ -1,19 +1,15 @@
-import { FC, PropsWithChildren, usesState } from 'react'
-import './assets/css/styles.css'
+import { useState } from 'react';
 
-
-const Icon: FC<PropsWithChildren> = ({ children }) => (
+const Icon = ({ children }) => (
     <i className='materaial-symbols-ouylined'>
         { children }
-
     </i>
 );
 
-export const Button = ()=>{
-    const [ isOpen, setIsOpen ] =
-      useState<boolean>(false);
+const Button = () => {
+    const [ isOpen, setIsOpen ] = useState(false);
 
-      return(
+    return (
         <div className={`fa ${isOpen ? 'open' : ""}`}>
             <button onClick={() => setIsOpen(! isOpen)}>
                 <Icon> add </Icon>
@@ -26,5 +22,7 @@ export const Button = ()=>{
                {/* others buttons  */}
             </div>
         </div>
-      )
-}
+    );
+};
+
+export default Button;
